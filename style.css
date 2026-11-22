@@ -1,0 +1,252 @@
+
+/* MOREIRA AUTO ELÉTRICA MÓVEL */
+
+:root {
+    --preto: #080808;
+    --amarelo: #ffd500;
+    --laranja: #f59e0b;
+    --branco: #ffffff;
+    --cinza: #181818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--preto);
+    color: var(--branco);
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: #101010;
+    border-bottom: 3px solid var(--amarelo);
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.raio {
+    font-size: 40px;
+}
+
+.marca h1 {
+    font-size: 24px;
+    color: var(--branco);
+}
+
+.marca h1 span {
+    display: block;
+    font-size: 14px;
+    color: var(--amarelo);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--amarelo);
+}
+
+/* PÁGINA INICIAL */
+
+.inicio {
+    text-align: center;
+    padding: 45px 6%;
+    background: linear-gradient(#111111, #000000);
+}
+
+.inicio img {
+    width: 100%;
+    max-width: 950px;
+    border-radius: 12px;
+    border: 2px solid var(--amarelo);
+    margin-bottom: 25px;
+}
+
+.inicio h2 {
+    color: var(--amarelo);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.inicio p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* BOTÕES */
+
+.botao,
+#botao-mensagem {
+    display: inline-block;
+    background: var(--amarelo);
+    color: var(--preto);
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.botao:hover,
+#botao-mensagem:hover {
+    background: var(--laranja);
+    transform: translateY(-3px);
+}
+
+/* SERVIÇOS */
+
+.servicos {
+    padding: 65px 6%;
+    text-align: center;
+    background: #141414;
+}
+
+section h2 {
+    margin-bottom: 30px;
+}
+
+.servicos h2,
+.sobre h2,
+.contato h2 {
+    color: var(--amarelo);
+    font-size: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: #222222;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #444444;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--amarelo);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--amarelo);
+    margin-bottom: 12px;
+}
+
+/* SOBRE */
+
+.sobre {
+    text-align: center;
+    padding: 65px 6%;
+}
+
+.sobre p {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+.sobre img {
+    width: 100%;
+    max-width: 950px;
+    border-radius: 12px;
+}
+
+/* CONTATO */
+
+.contato {
+    text-align: center;
+    padding: 65px 6%;
+    background: var(--cinza);
+}
+
+.botoes-contato {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#botao-mensagem {
+    display: block;
+    margin: 30px auto 15px;
+}
+
+#mensagem {
+    color: var(--amarelo);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #000000;
+    text-align: center;
+    padding: 25px;
+    border-top: 2px solid var(--amarelo);
+    color: #cccccc;
+}
+
+/* CELULARES E TABLETS */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio h2 {
+        font-size: 24px;
+    }
+
+    .marca h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
